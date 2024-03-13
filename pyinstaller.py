@@ -2,9 +2,11 @@
 This script is used to build the project using pyinstaller.
 """
 
+
 import subprocess
 
-def build():
+
+def build() -> None:
   """Build the project using pyinstaller.
   """
   check = subprocess.run(['pyinstaller', 'project.spec'], check=True)
