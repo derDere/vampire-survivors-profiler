@@ -10,15 +10,6 @@ def test_app_creation():
   assert isinstance(app, main.App)
 
 
-def test_button_click():
-  """Test that the button click changes the label text.
-  """
-  app = main.App()
-  button = app.button
-  button.invoke()  # Simulate button click
-  assert app.label.cget("text") == "Button Clicked!"
-
-
 if __name__ == "__main__":
   import pytest
   pytest.main()

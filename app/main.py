@@ -11,19 +11,22 @@ class App(tk.Tk):
   def __init__(self):
     super().__init__()
 
-    self.title("Professional Tkinter App")
-    self.geometry("400x300")
+    self.title("Vampire Survivors Profiler")
+    self.configure(bg="#7A0019")
+    width, height, x, y = self._find_bounds()
+    self.geometry(f'{width}x{height}+{x}+{y}')
+    self.resizable(False, False)
 
-    self.label = tk.Label(self, text="Welcome to the App!", font=("Helvetica", 16))
-    self.label.pack(pady=20)
-
-    self.button = tk.Button(self, text="Click Me", command=self.on_click)
-    self.button.pack()
-
-  def on_click(self):
-    """Button click event handler.
+  def _find_bounds(self):
+    """Find the center of the screen.
     """
-    self.label.config(text="Button Clicked!")
+    width = 650
+    height = 800
+    screen_width = self.winfo_screenwidth()
+    screen_height = self.winfo_screenheight()
+    x = (screen_width // 2) - (width // 2)
+    y = (screen_height // 2) - (height // 2)
+    return width, height, x, y
 
 
 def main():

@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Python: Poetry Tkinter App",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/app/main.py",
+          "console": "integratedTerminal",
+          "env": {
+            "DISPLAY": ":0"
+          }
+      }
+  ]
+}
