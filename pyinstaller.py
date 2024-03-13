@@ -9,6 +9,6 @@ import subprocess
 def build() -> None:
   """Build the project using pyinstaller.
   """
-  check = subprocess.run(['pyinstaller', 'project.spec'], check=True)
+  check: subprocess.CompletedProcess[bytes] = subprocess.run(['pyinstaller', 'project.spec'], check=True)
   if check.returncode == 0:
     print("Build successful.")

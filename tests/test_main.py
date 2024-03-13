@@ -3,7 +3,7 @@
 from app import main
 
 
-def test_app_creation():
+def test_app_creation() -> None:
   """Test that the App class can be instantiated.
   """
   app = main.App()

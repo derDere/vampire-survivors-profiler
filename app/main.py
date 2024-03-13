@@ -8,7 +8,7 @@ class App(tk.Tk):
   """Main application class.
   """
 
-  def __init__(self):
+  def __init__(self) -> None:
     super().__init__()
 
     self.title("Vampire Survivors Profiler")
@@ -17,7 +17,7 @@ class App(tk.Tk):
     self.geometry(f'{width}x{height}+{x}+{y}')
     self.resizable(False, False)
 
-  def _find_bounds(self):
+  def _find_bounds(self) -> tuple[int, int, int, int]:
     """Find the center of the screen.
     """
     width = 650
@@ -29,10 +29,10 @@ class App(tk.Tk):
     return width, height, x, y
 
 
-def main():
+def main() -> None:
   """Main function.
   """
-  app = App()
+  app:App = App()
   app.mainloop()
 
 
