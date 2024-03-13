@@ -1,6 +1,6 @@
 # Vampire Survivors Profiler
 
-![Vampire Survivors Profiler](screenshot.png)
+![Vampire Survivors Profiler](preview.png)
 
 ## Description
 
