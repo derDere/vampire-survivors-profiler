@@ -4,8 +4,26 @@ import tkinter as tk
 #from tkinter.constants import *
 
 
-#BG_COLOR = "#44000D"
-BG_COLOR = "#800725"
+#BG_COLOR = "#44000D" # Darker as a first try but not fitton to the original game
+BG_COLOR = "#800725" # way closer to the game (also used in the textures)
+
+
+class SelectButton(tk.Button):
+  """A button that can be selected/focused.
+     It will get selected on mouse hover.
+     There is a select function and a press function.
+     The currently selected button will get sored in a shared variable.
+     There will be a is_selected property checking if the current instance is the selected button.
+  """
+  selected_button = None
+
+  def __init__(self, text:str, command:_ButtonCommand) -> None:
+    super().__init__(text=text, command=command)
+
+  def select(self):
+    """Select the button.
+    """
+    SelectButton.selected_button = self
 
 
 class App(tk.Tk):
