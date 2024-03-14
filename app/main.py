@@ -1,7 +1,10 @@
 """ Main application file.
 """
-
 import tkinter as tk
+from tkinter.constants import *
+
+
+BG_COLOR = "#44000D"
 
 
 class App(tk.Tk):
@@ -12,10 +15,15 @@ class App(tk.Tk):
     super().__init__()
 
     self.title("Vampire Survivors Profiler")
-    self.configure(bg="#7A0019")
+    self.configure(bg=BG_COLOR)
     width, height, x, y = self._find_bounds()
     self.geometry(f'{width}x{height}+{x}+{y}')
     self.resizable(False, False)
+
+    self.logo_img = tk.PhotoImage(file="app/assets/logo.png")
+
+    self.logo = tk.Label(self, image=self.logo_img, bg=BG_COLOR)
+    self.logo.pack()
 
   def _find_bounds(self) -> tuple[int, int, int, int]:
     """Find the center of the screen.
