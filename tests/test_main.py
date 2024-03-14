@@ -8,6 +8,10 @@ def test_app_creation() -> None:
   """
   app = main.App()
   assert isinstance(app, main.App)
+  assert app.cget("bg") == main.BG_COLOR
+  assert app.logo_img is not None
+  assert isinstance(app.logo_img, main.tk.PhotoImage)
+  assert isinstance(app.logo, main.tk.Label)
 
 
 if __name__ == "__main__":

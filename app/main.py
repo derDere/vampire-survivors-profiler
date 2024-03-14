@@ -1,10 +1,11 @@
 """ Main application file.
 """
 import tkinter as tk
-from tkinter.constants import *
+#from tkinter.constants import *
 
 
-BG_COLOR = "#44000D"
+#BG_COLOR = "#44000D"
+BG_COLOR = "#800725"
 
 
 class App(tk.Tk):
